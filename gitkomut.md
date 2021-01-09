@@ -75,7 +75,7 @@ Yaptığımız değişikleri iptal eder, geri alır.
 
 ___
 
-##### Commitleri Görmek 
+#### Commitleri Görmek 
 
 `git show`
 
@@ -91,14 +91,13 @@ Author: Berke Karataş <uberke.karatas@gmail.com>
 Date:   Sat Jan 9 04:41:44 2021 +0300
 
 restore
-
 ```
 
 `git log --oneline`
 
 Attığımız commitlerin ilk 7 hanesini ve commitini gösterir.
 
-**5aaefad birinci kısım tamamlandı**
+Örnek : **5aaefad birinci kısım tamamlandı**
 
 `git log -p -2`
 
@@ -110,3 +109,17 @@ Atılan son 2 commiti gösterir
 `git log --since=2weeks`
 
 Belirlediğimiz zaman aralığında atılan commitleri gösterir. 
+
+___
+
+#### checkout
+
+`git checkout <commitID>`
+
+Zamanda yolculuk yapar gibi, ID'sini verdiğimiz commite döndük. 
+
+Bu committeki kodları inceleyebiliriz bize bunu sağlar ama herhangi bir silme işlemi, iptal etme işlemi yapmaz.
+
+`git checkout master`
+
+En yeni haline dönmemizi sağlar. Yani son committe projemizin olduğu hali.
