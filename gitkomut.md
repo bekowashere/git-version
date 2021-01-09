@@ -56,3 +56,21 @@ Linux'daki **ls** komutunun, Windows'daki **dir** komutunun aynısı. Dosyaları
 `mv text.txt readme.txt`
 
 Dosya adını değiştirmemizi sağlar.
+
+___
+
+Bazen yaptığımız dosyaları geri almak isteyebiliriz. **Commit** işleminden önce işlemlerimizi geri almak için aşağıdaki komutlarını kullanmalıyız.
+
+`git restore --staged <filename>`
+
+Bu işlemi yaptıktan sonra **git status** yaparsak file'mız tekrar kırmızı olarak gözükecektir. Yani **staging area**dan **working directory**mize geri döndürür.
+
+Örneğin, *git add index.html* yaptığımızı varsayalım. Bu kodumuzdan sonra *git status* yazarsak git bash komut satırında kırmızı renkte **modified: index.html** yazısını görürüz.
+
+`git restore <file>`
+
+Yaptığımız değişikleri iptal eder, geri alır. 
+
+Örneğin, VSCode'u açalım ve index.htmlde yaptığımız değişikliklere bakalım(index.htmlde değişiklik yapıp *git add index.html* dediğimizi varsayıyorum). Sonrasında bu kodu(*git restore index.html*) yazdığımız zaman, add işleminden önceki index.html durumu nasılsa kodlarımız o ana geri dönecektir.
+
+___
