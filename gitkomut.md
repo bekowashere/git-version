@@ -12,7 +12,7 @@ Yaptığımız değişiklikleri görmek için **--list** komutunu kullanmalıyı
 
 `git config --list`
 
-____
+___
 
 Klasörümüzün içinde **Git Bash** çalıştırdıktan sonra sırasıyla yazmamız gereken komutlar :
 
@@ -39,7 +39,7 @@ Tekli olarak eklemek istediğimiz dosyayı eklememizi sağlar.
 
 Bütün dosyaları eklememizi sağlar.
 
-____
+___
 
 `touch text.txt`
 
@@ -71,6 +71,42 @@ Bu işlemi yaptıktan sonra **git status** yaparsak file'mız tekrar kırmızı 
 
 Yaptığımız değişikleri iptal eder, geri alır. 
 
-Örneğin, VSCode'u açalım ve index.htmlde yaptığımız değişikliklere bakalım(index.htmlde değişiklik yapıp *git add index.html* dediğimizi varsayıyorum). Sonrasında bu kodu(*git restore index.html*) yazdığımız zaman, add işleminden önceki index.html durumu nasılsa kodlarımız o ana geri dönecektir.
+Örneğin, VSCode'u açalım ve index.htmlde yaptığımız değişikliklere bakalım(index.htmlde değişiklik yapıp *git add index.html* dediğimizi varsayıyorum). Sonrasında bu kodu(*git restore index.html*) yazdığımız zaman, add işleminden önceki index.html durumu nasılsa kodlarımız o ana geri dönecektir bunu anlık olarak VSCode'da gözlemleyebiliriz.
 
 ___
+
+##### Commitleri Görmek 
+
+`git show`
+
+Atılan son **commit**i gösterir.
+
+`git log`
+
+**Detaylı** olarak bütün commitleri gösterir. Örnek:
+
+```
+commit 5aaefadea5b9a20b80123a7a7f4f18a1d1c9cbb4
+Author: Berke Karataş <uberke.karatas@gmail.com>
+Date:   Sat Jan 9 04:41:44 2021 +0300
+
+restore
+
+```
+
+`git log --oneline`
+
+Attığımız commitlerin ilk 7 hanesini ve commitini gösterir.
+
+**5aaefad birinci kısım tamamlandı**
+
+`git log -p -2`
+
+Atılan son 2 commiti gösterir
+
+`git log --since=30minutes`
+`git log --since=5hours`
+`git log --since=3days`
+`git log --since=2weeks`
+
+Belirlediğimiz zaman aralığında atılan commitleri gösterir. 
